@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-pt" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" src="./js/detect-ie-redirect.js"></script>
+    <meta http-equiv="content-Type" content="text/html; utf-8">
+    <meta http-equiv="Pragma" content="cache">
+    <meta charset="utf-8" />
+    <meta http-equiv="content-Language" content="en">
+    <title>MMPI-2 - Inventário Múltifásico de Personalidade de Minnesota</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+</head>
+<body>
+    <div class="lg:content-auto">
+        <div class="bg-white relative isolate">
+            <div id="q-background" contents="q-background"></div>
+            <div id="q-header" contents="q-header"></div>
+            <div id="q-identification"></div>
+            <div id="q-questions" class="hidden"></div>
+            <div id="q-submission" class="hidden"></div>
+            <div id="q-submission-modal" contents="q-submission-modal" class="hidden"></div>
+            <div id="q-submission-model-alert" contents="q-submission-modal-alert" class="hidden"></div>
+            <div id="q-submission-loading" contents="q-submission-loading" class="hidden"></div>
+            <div id="q-submission-failure" contents="q-submission-failure" class="hidden"></div>
+        </div>
+        <button onclick="topFunction()" id="button-goToTop" class="w-fit rounded-md duration-300 bg-gray-200 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" title="Voltar ao topo">
+            Voltar ao topo &#x2191;
+        </button>
+    </div>
+</body>
+</html>
+<footer>
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/scales.js"></script>
+    <script type="text/javascript" src="./js/questions.js"></script>
+    <script type="text/javascript" src="./js/chart.js"></script>
+    <script type="text/javascript" src="./js/utils.js"></script>
+    <script type="text/javascript" src="./js/score.js"></script>
+
+    <script type="text/javascript">
+
+        var exports = {};
+
+        longform = true;
+        ans = [];
+        loaded = {
+            identification: false,
+            questions: false
+        };
+
+        function use_long_form(lf) {
+            lf ?
+                $(".longform").addClass("hidden") :
+                $(".longform").removeClass("hidden")
+        }
+
+        window.onbeforeunload = function () {
+            return "Tem a certeza que pretende sair da página? Irá perder todas as respostas introduzidas até ao momento.";
+        }
+
+    </script>
+</footer>

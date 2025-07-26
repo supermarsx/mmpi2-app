@@ -1,0 +1,30 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": false,
+    "checkJs": false,
+    "composite": true,
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "esModuleInterop": true,
+    //"isolatedModules": true,
+    "jsx": "preserve",
+    "module": "none",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "./dist/js",
+    "removeComments": true,
+    "rootDir": "source/ts",
+    "baseUrl": ".",
+    "sourceMap": false,
+    "strict": true,
+    "target": "ES6"
+  },
+  "include": [ "./source/ts/*.ts" ]
+}

@@ -1,0 +1,13 @@
+﻿<div class="mx-auto max-w-3xl py-2">
+    <div class="py-8 text-center grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-gray-900 lg:gap-x-10">
+        <a id="button-second-score" onclick="toggleSecondScore()" class="btn-action w-fit rounded-md duration-300 bg-gray-100 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Mostrar / Esconder matriz secundária / cálculo secundário <span aria-hidden="true">&darr;</span></a>
+    </div>
+    <div id="d-second-score-container" class="hidden">
+        <label for="ata" class="block text-sm font-medium leading-6 text-gray-900">Caixa matriz de respostas</label>
+        <textarea id="ata" class="block shadow-sm w-full rounded-md border-0 py-1.5 pl-4 pr-4 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" cols="76" rows="9"></textarea>
+        <div class="py-8 text-center grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-gray-900 lg:gap-x-10">
+            <a id="button-second-score-calculation" onclick="score_text(document.forms.anstext.ata.value);" class="btn-action w-fit rounded-md duration-300 bg-green-100 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-green-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Calcular resultados da caixa matriz</a>
+        </div>
+    </div>
+
+</div>

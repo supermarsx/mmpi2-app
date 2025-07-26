@@ -1,0 +1,45 @@
+﻿html {
+    scroll-behavior: smooth;
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+    user-select: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    content: none;
+    outline: none;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+input[type="radio"]:checked {
+    appearance: none;
+    outline: none;
+    padding: 0;
+    content: none;
+    border: none;
+}
+
+input[type="radio"]:checked::before {
+    position: absolute;
+    content: "\00A0\2717\00A0" !important;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+
+#button-goToTop {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 1; /* Make sure it does not overlap */
+    cursor: pointer; /* Add a mouse pointer on hover */
+}

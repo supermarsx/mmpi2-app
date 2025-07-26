@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="pt-pt" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" src="./js/detect-ie-redirect.js"></script>
+
+    <meta http-equiv="content-Type" content="text/html; utf-8">
+    <meta http-equiv="Pragma" content="cache">
+    <meta charset="utf-8" />
+    <meta name="author" content="">
+    <meta name="audience" content="all">
+    <meta http-equiv="content-Language" content="pt-pt">
+
+    <title>MMPI-2 - Dashboard</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+</head>
+<body>
+    <div class="lg:content-auto">
+        <div class="bg-white relative isolate">
+            <div class="mx-auto max-w-5xl py-24 sm:py-24 lg:py-32 border-gray-900/10">
+                <div id="d-submission-loading" contents="d-submission-loading"></div>
+                <div id="d-results-loading" contents="d-results-loading" class="hidden"></div>
+                <div id="d-background" contents="d-background"></div>
+                <div id="d-header" contents="d-header"></div>
+                <div id="d-identification" contents="d-identification"></div>
+                <div id="d-questions" contents="d-questions"></div>
+                <div id="d-first-score" contents="d-first-score"></div>
+                <div id="d-second-score" contents="d-second-score"></div>
+                <div id="d-graphs" contents="d-graphs"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <script type="text/javascript">
+            const dashboardData = {
+                name: "<%= name %>",
+                dob: "<%= dob %>",
+                age: "<%= age %>",
+                gender: "<%= gender %>",
+                version: "<%= version %>",
+                answers: "<%= answers %>"
+            };
+            var tableRowIndex = 0;
+        </script>
+        <script type="text/javascript" src="./js/scales.js"></script>
+        <script type="text/javascript" src="./js/questions.js"></script>
+        <script type="text/javascript" src="./js/canvastext.js"></script>
+        <script type="text/javascript" src="./js/chart.js"></script>
+        <script type="text/javascript" src="./js/utils.js"></script>
+        <script type="text/javascript" src="./js/score.js"></script>
+        <script type="text/javascript" src="./js/app.js"></script>
+        <script type="text/javascript" src="./js/dashboard.js"></script>
+
+        <script type="text/javascript">
+
+            // ----- Global varibales -----
+            // Tell JSLint about intentional global variables
+            /*global questions, scales, rin, longform, gender, ans */
+
+            var exports = {};
+
+            longform = true;	// All questions or first 370
+            gender = 0;		    // 0==male, 1==female
+            chart_style = 0;	// 0==fancy 1==plain
+            ans = [];			// Answers to questions: [T,F,?]
+
+            // Set the test gender - called by onclick() event in the form
+            function set_gender(g) {
+                gender = g;
+            }
+
+            // Set the test length - called by onclick() event in the form
+            function use_long_form(lf) {
+                longform = lf;
+                //longformdiv.style.visibility=longform?"visible":"hidden";
+                longformdiv.style.display = longform ? "inline" : "none";
+            }
+
+            // Set the chart style - called by onclick() event in the form
+            function set_chart_style(cs) {
+                chart_style = cs;
+            }
+
+
+
+        </script>
+    </footer>
+</body>
+
+</html>

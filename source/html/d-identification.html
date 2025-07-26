@@ -1,0 +1,55 @@
+﻿<div class="mx-auto max-w-2xl py-8 border-b">
+    <h2 class="text-2xl py-2 tracking-tight text-gray-900 sm:text-2xl">Identificação</h2>
+    <div class="py-1">
+        <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Nome</label>
+        <div class="relative mt-2 rounded-md">
+            <input type="text" name="name" id="name" required autocomplete="off" class="block shadow-sm w-full rounded-md border-0 py-1.5 pl-4 pr-4 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Nome">
+        </div>
+    </div>
+    <div class="py-1 w-48">
+        <label for="dob" class="block text-sm font-medium leading-6 text-gray-900">Data de nascimento</label>
+        <div class="relative mt-2 rounded-md">
+            <input type="date" name="dob" id="dob" required autocomplete="off" oninput="onDobInput(this)" class="block shadow-sm w-auto rounded-md border-0 py-1.5 pl-4 pr-4 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Data de nascimento">
+        </div>
+    </div>
+    <div class="py-1 w-32">
+        <label for="age" class="block text-sm font-medium leading-6 text-gray-900">Idade</label>
+        <div class="relative mt-2 rounded-md">
+            <input type="number" name="age" id="age" min="0" max="120" maxlength="3" required autocomplete="off" oninput="onAgeInput(this)" class="block shadow-sm w-full rounded-md border-0 py-1.5 pl-4 pr-4 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="">
+        </div>
+    </div>
+    <div class="py-1">
+        <label for="gender" class="block text-sm font-medium leading-6 text-gray-900">Género</label>
+        <div class="relative mt-2 rounded-md">
+            <input type="text" name="gender" id="gender" required autocomplete="off" class="mr-4 shadow-sm w-32 rounded-md border-0 py-1.5 pl-4 pr-4 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="">
+            <input name="gender" value="M" onclick="set_gender(0);" checked="checked" type="radio"><span class="mb-2 py-1 px-2">Masculino</span>
+            <input name="gender" value="F" onclick="set_gender(1);" type="radio"><span class="mb-2 py-1 px-2">Feminino</span>
+        </div>
+    </div>
+    <div role="alert" class="py-1">
+        <div class="border border-yellow-400 rounded bg-yellow-100 px-4 py-3 text-yellow-700">
+            <p><b>Aviso:</b> Seleccione o género com base na resposta do utilizador.</p>
+        </div>
+    </div>
+    <div class="py-1 w-32">
+        <label for="version" class="block text-sm font-medium leading-6 text-gray-900">Versão</label>
+        <div class="relative mt-2">
+            <select id="version" name="version" class="block pl-4 pr-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                <option value="long">Longa</option>
+                <option value="short">Curta</option>
+            </select>
+            <div class="hidden">
+                <input name="testform" value="L" onclick="use_long_form(true);" checked="checked" type="radio">Long Form&nbsp;
+                <input name="testform" value="S" onclick="use_long_form(false);" type="radio">Short Form<br>
+            </div>
+        </div>
+    </div>
+    <div class="py-1">
+        <label for="graphics" class="block text-sm font-medium leading-6 text-gray-900">Tipo de gráficos</label>
+        <div class="relative mt-2">
+            <input name="chartstyle" value="0" onclick="set_chart_style(0);" checked="checked" type="radio"><span class="mb-2 py-1 px-2">Compostos</span>
+            <input name="chartstyle" value="1" onclick="set_chart_style(1);" type="radio"><span class="mb-2 py-1 px-2">Simples</span>
+        </div>
+    </div>
+</div>
+

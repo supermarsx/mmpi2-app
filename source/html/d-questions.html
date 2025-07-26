@@ -1,0 +1,19 @@
+﻿<div class="mx-auto max-w-3xl py-2">
+    <div class="max-w-2xl">
+        <h2 class="text-2xl py-6 tracking-tight text-gray-900 sm:text-2xl">Folha de respostas / Afirmações</h2>
+        <p class="mt-6 text-md leading-8 text-gray-700 text-left py-6">
+            A legenda de seleção para cada afirmação tem a correspondência indicada abaixo, devendo responder sempre que possível com "Verdadeiro" ou "Falso".
+            <br />
+            <b>SR</b>: Sem resposta, <b>V</b>:Verdadeiro e <b>F</b>: Falso.
+        </p>
+    </div>
+    <div class="py-8 text-center grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-gray-900 lg:gap-x-10">
+        <a id="button-goToQuestions" onclick="toggleQuestions()" class="btn-action w-fit rounded-md duration-300 bg-gray-100 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Mostrar / Esconder folha de respostas <span aria-hidden="true">&darr;</span></a>
+    </div>
+    <div class="max-w-2xl">
+        <form style="font-family: Arial;" name="questions">
+            <div id="q-questions-container" class="max-w-3xl text-md leading-8 text-gray-700 text-left hidden">
+            </div>
+        </form>
+    </div>
+</div>

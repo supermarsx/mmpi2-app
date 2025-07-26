@@ -1,0 +1,45 @@
+﻿<div class="h-screen mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 border-b">
+    <h2 class="text-2xl py-2 tracking-tight text-gray-900 sm:text-2xl">Identificação</h2>
+    <div class="py-1">
+        <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Nome</label>
+        <div class="relative mt-2 rounded-md">
+            <input type="text" name="name" id="name" required autocomplete="off" class="block shadow-sm w-full rounded-md border-0 py-1.5 pl-4 pr-4 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Nome">
+        </div>
+    </div>
+    <div class="py-1 w-48">
+        <label for="dob" class="block text-sm font-medium leading-6 text-gray-900">Data de nascimento</label>
+        <div class="relative mt-2 rounded-md">
+            <input type="date" name="dob" id="dob" required autocomplete="off" oninput="onDobInput(this)" class="block shadow-sm w-auto rounded-md border-0 py-1.5 pl-4 pr-4 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Data de nascimento">
+        </div>
+    </div>
+    <div class="py-1 w-32">
+        <label for="age" class="block text-sm font-medium leading-6 text-gray-900">Idade</label>
+        <div class="relative mt-2 rounded-md ">
+            <input type="number" name="age" id="age" min="0" max="120" maxlength="3" required autocomplete="off" oninput="onAgeInput(this)" class="block shadow-sm w-full rounded-md border-0 py-1.5 pl-4 pr-4 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="">
+        </div>
+    </div>
+    <div class="py-1 w-32">
+        <label for="gender" class="block text-sm font-medium leading-6 text-gray-900">Género</label>
+        <div class="relative mt-2 rounded-md">
+            <input type="text" name="gender" id="gender" required autocomplete="off" class="block shadow-sm w-full rounded-md border-0 py-1.5 pl-4 pr-4 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="">
+        </div>
+    </div>
+    <div class="py-1 w-32">
+        <label for="version" class="block text-sm font-medium leading-6 text-gray-900">Versão</label>
+        <div class="relative mt-2">
+            <select id="version" name="version" disabled class="block pl-4 pr-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6">
+                <option value="long">Longa</option>
+                <option value="short">Curta</option>
+            </select>
+        </div>
+    </div>
+    <div id="q-identification-alert" role="alert" class="py-6 invisible">
+        <div class="border border-red-400 rounded bg-red-100 px-4 py-3 text-red-700">
+            <p>Por favor preencha todos os campos de identificação antes de prosseguir.</p>
+        </div>
+    </div>
+    <div class="py-8 text-center grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-gray-900 lg:gap-x-10">
+        <a id="button-goToQuestions" onclick="goToQuestions()" class="btn-action w-fit rounded-md duration-300 bg-gray-100 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Ir para a próxima secção <span aria-hidden="true">&darr;</span></a>
+    </div>
+</div>
+
